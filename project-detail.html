@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakki的个人网站 - 项目详情</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                Zakki
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="projects.html" class="nav-link active">项目</a>
+                <button id="resumeBtn" class="nav-link">简历</button>
+                <a href="index.html#contact" class="nav-link">联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 项目详情页头部 -->
+    <section class="project-detail-hero">
+        <div class="project-detail-hero-content">
+            <a href="projects.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> 返回项目列表
+            </a>
+            <h1 id="projectTitle"></h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-tag"></i>
+                    <span id="projectCategory"></span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span id="projectDate">2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目内容 -->
+    <section class="section">
+        <div class="section-container">
+            <!-- 项目概述 -->
+            <div class="card">
+                <h2 class="section-title">项目概述</h2>
+                <p id="projectDescription">。</p>
+            </div>
+
+            <!-- 项目详情 -->
+            <div class="card">
+                <h2 class="section-title">项目详情</h2>
+                <div id="projectDetails">
+                    <h3>项目背景</h3>
+                    <p>。</p>
+                    
+                    <h3>技术实现</h3>
+                    <p>。</p>
+                    
+                    <h3>核心功能</h3>
+                    <ul>
+                        <li><strong>要点</strong>：</li>
+                    </ul>
+                    
+                    <h3>项目成果</h3>
+                    <p>。</p>
+                </div>
+            </div>
+
+            <!-- 技术栈 -->
+            <div class="card">
+                <h2 class="section-title">使用技术</h2>
+                <div class="tech-tags" id="techTags">
+                    <span class="tech-tag"></span>
+                    <span class="tech-tag"></span>
+                </div>
+            </div>
+
+            <!-- 项目展示 -->
+            <div class="card">
+                <h2 class="section-title">项目展示</h2>
+                <div class="project-gallery" id="projectGallery">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/qa_system.png" alt="系统架构图">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/qa_cut.png" alt="项目截图">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目链接 -->
+            <div class="card">
+                <h2 class="section-title">相关链接</h2>
+                <p>右键打开</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-secondary" id="githubLink" target="_blank">
+                        <i class="fab fa-github"></i> GitHub 仓库
+                    </a>
+                    <a href="#" class="btn btn-ghost" id="documentLink" target="_blank">
+                        <i class="fas fa-file-alt"></i> 项目文档
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Zakki
+                </div>
+                
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="projects.html" class="footer-link">项目</a></li>
+                    <li><a href="index.html#contact" class="footer-link">联系我</a></li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="https://github.com/zakki2025/zakki2025" class="social-link" title="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://zakki2025.github.io/zakki2025/assets/wechat.jpg" class="social-link" title="微信" target="_blank">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zakki 个人网站. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 深色模式切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" title="切换深色模式">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop" title="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 返回顶部按钮功能
+            const backToTopButton = document.getElementById('backToTop');
+            
+            if (backToTopButton) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.opacity = '1';
+                        backToTopButton.style.visibility = 'visible';
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                        backToTopButton.style.visibility = 'hidden';
+                    }
+                });
+                
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // 根据URL参数加载不同项目的内容
+            loadProjectContent();
+        });
+        
+        function loadProjectContent() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            // 项目数据
+            const projectsData = {
+                1: {
+                    title: "个人知识库管理与问答系统",
+                    category: "技术开发",
+                    date: "2025.5 - 至今",
+                    description: "基于GraphRAG和DoRA的个人知识库管理与问答系统，能够高效管理个人学习资料并提供智能问答功能。该系统通过先进的图检索增强生成技术和量化低秩适应技术，实现了对大量文档的智能处理和精准问答。",
+                    tags: ["Flutter", "GraphRAG", "DoRA", "NLP"],
+                    
+                    details: {
+                        background: "随着信息时代的到来，个人学习和工作中积累的文档资料越来越多，如何高效地管理和检索这些知识成为了一个重要问题。传统的文件管理方式往往无法满足快速准确检索的需求，因此开发一个智能的知识库管理系统变得尤为重要。",
+                        implementation: "系统采用最新的GraphRAG（图检索增强生成）技术，将文档内容转换为知识图谱，通过图结构来表示实体之间的关系。同时结合DoRA技术，在保持模型性能的同时大幅降低了计算资源需求。",
+                        features: [
+                            "自动提取文档中的实体和关系，构建知识图谱",
+                            "基于知识图谱的问答系统，提供准确的答案和相关上下文",
+                            "支持自然语言查询，理解用户意图并返回相关内容"
+                        ],
+                        outcomes: "正在微调大模型，已完成基于Flutter的应用搭建。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_cut.png",
+                            caption: "界面截图"
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/qa_system",
+                        document: "https://zakki2025.github.io/zakki2025/assets/1.pdf"
+                    }
+                },
+                2: {
+                    title: "户外广告物料与效果图生成系统",
+                    category: "技术开发",
+                    date: "2025.6",
+                    description: "该系统集成了文生图、图生图和图像融合技术：通过prompt优化生成底图、FLUX融合生成物料，以及Python编写ComfyUI自定义节点实现户外广告屏识别和物料嵌入。通过内网穿透、API调用和工作流设计，在coze平台上搭建起可交互前端，从而实现广告物料的快速设计与实时效果展示。",
+                    tags: ["prompt优化", "FLUX", "ComfyUI", "ngrok"],
+                    
+                    details: {
+                        background: "AI驱动广告变革：创意、制作到分发的重塑。<br>传统的制作展示流程繁琐低效；户外广告时效性与个性化需求升级",
+                        implementation: "整合Coze、ComfyUI等AI工具构建工作流，实现“图像分析-创意生成-效果优化”的应用闭环。通过多模型协同，高效联动不同效能的AI产品，实践广告生产从“人工主导”向“AI协同”的转型。",
+                        features: [
+                            "通过AI技术实现广告物料与效果图的快速生成",
+                            "提升设计效率并降低企业的宣传成本",
+                            "快速预览广告在不同户外场景下的展示效果"
+                        ],
+                        outcomes: "在coze平台上成功运行。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/2-1.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/2-2.png",
+                            caption: "效果图"
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "https://zakki2025.github.io/zakki2025/assets/2.pdf"
+                    }
+                },
+                3: {
+                    title: "三元协同的智能内容生成系统",
+                    category: "技术开发",
+                    date: "2025.5 - 2025.6",
+                    description: "基于三元优化的内容智能生成平台，提供高质量的内容创作解决方案。通过先进的AI算法，实现多样化内容的自动生成和优化。",
+                    tags: ["prompt优化", "AIGC", "coze", "NLP"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/3-1.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/3-2.png",
+                            caption: "效果评估"
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "https://zakki2025.github.io/zakki2025/assets/3.pdf"
+                    }
+                },
+                4: {
+                    title: "正大杯市场调查与分析大赛",
+                    category: "数据分析 调研策划",
+                    date: "2024.11 - 2025.6",
+                    description: "全国大学生市场调查与分析大赛国家二等奖。针对正大集团的市场策略进行深入调研与分析，提出有效的市场拓展建议。",
+                    tags: ["市场调研", "数据分析", "战略规划"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+                5: {
+                    title: "农村老年居民互联网使用与幸福感研究",
+                    category: "数据分析 调研策划",
+                    date: "2025.3",
+                    description: "高级统计方法优秀结课论文，1.7k+阅读量。深入研究农村老年人群体的互联网使用行为与幸福感之间的关系，提供有价值的社会学洞察。",
+                    tags: ["统计分析", "因果推断", "数据挖掘"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+                6: {
+                    title: "图书馆POI自动打标系统",
+                    category: "技术开发 数据分析",
+                    date: "2024.7",
+                    description: "阿里瓴羊合作项目，获数据分析专家奖。针对全国范围内的图书馆类POI进行标签体系设计，利用Coze设计工作流进行POI批处理与自动打标。",
+                    tags: ["Coze", "数据分析", "POI分析", "体系设计"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+                7: {
+                    title: "北京老字号商印文创巡展",
+                    category: "调研策划",
+                    date: "2024.11 - 2025.6",
+                    description: "北京文化艺术基金传播交流推广资助项目。参与《北京老字号商印与百年社会生活图景》全媒体文创巡展项目，负责展览资料收集、内容搭建和策划。",
+                    tags: ["策展", "文化传播", "项目管理", "内容策划"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+                8: {
+                    title: "仿真推荐系统",
+                    category: "技术开发",
+                    date: "2024.11 - 2024.12",
+                    description: "用协同过滤和内容推荐算法实现精准推荐，提供个性化的内容推荐服务，提升用户体验和参与度。",
+                    tags: ["可视化", "推荐算法", "行为分析"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+                9: {
+                    title: "星宝互动平台",
+                    category: "技术开发 调研策划",
+                    date: "2024.7 - 2025.6",
+                    description: "专注于提升用户互动体验，通过深入的用户研究和创新的交互设计，打造AI赋能的数字化平台。",
+                    tags: ["互动设计", "用户研究", "前端工程"],
+                    
+                    details: {
+                        background: "。",
+                        implementation: "。",
+                        features: [
+                            "",
+                            ""
+                        ],
+                        outcomes: "。"
+                    },
+
+                    gallery: [
+                        {
+                            src: "assets/qa_system.png",
+                            caption: "系统架构图"
+                        },
+                        {
+                            src: "assets/qa_system.png",
+                            caption: ""
+                        }
+                    ],
+
+                    links: {
+                        github: "https://github.com/zakki2025/zakki2025/tree/main",
+                        document: "#"
+                    }
+                },
+            };
+            
+            if (projectId && projectsData[projectId]) {
+                const project = projectsData[projectId];
+                
+                // 更新页面内容
+                document.getElementById('projectTitle').textContent = project.title;
+                document.getElementById('projectCategory').textContent = project.category;
+                document.getElementById('projectDate').textContent = project.date;
+                document.getElementById('projectDescription').textContent = project.description;
+                
+                // 更新技术标签
+                const techTagsContainer = document.getElementById('techTags');
+                techTagsContainer.innerHTML = '';
+                project.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'tech-tag';
+                    tagElement.textContent = tag;
+                    techTagsContainer.appendChild(tagElement);
+                });
+                
+                document.getElementById('projectDetails').innerHTML = `
+                    <h3>项目背景</h3>
+                    <p>${project.details.background}</p>
+                    <h3>技术实现</h3>
+                    <p>${project.details.implementation}</p>
+                    <h3>核心功能</h3>
+                    <ul>${project.details.features.map(feature => `<li><strong>要点：</strong>${feature}</li>`).join('')}</ul>
+                    <h3>项目成果</h3>
+                    <p>${project.details.outcomes}</p>`;
+                document.getElementById('githubLink').href = project.links.github;
+                document.getElementById('documentLink').href = project.links.document;
+
+                // 更新页面标题
+                document.title = `Zakki - ${project.title}`;
+
+                //更新画廊
+                const galleryContainer = document.getElementById('projectGallery');
+                const galleryItems = galleryContainer.querySelectorAll('.gallery-item');
+                // 遍历项目数据中的 gallery 数组
+                project.gallery.forEach((item, index) => {
+                    if (galleryItems[index]) {
+                        const imgElement = galleryItems[index].querySelector('img');
+                        if (imgElement) {
+                            imgElement.src = item.src;
+                            imgElement.alt = item.caption;
+                        }
+                    }
+                });
+                // 如果当前项目的图片数量少于默认展示的数量，隐藏多余的 .gallery-item
+                for (let i = project.gallery.length; i < galleryItems.length; i++) {
+                    galleryItems[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
