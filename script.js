@@ -231,15 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 社交链接点击事件
-    document.querySelectorAll('.social-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const platform = this.title;
-            showNotification(`${platform} 链接功能正在开发中...`, 'info');
-        });
-    });
-    
     // 项目卡片悬停效果增强
     document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
