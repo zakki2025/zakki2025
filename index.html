@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakki - 个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient">
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                Zakki
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">首页</a>
+                <a href="projects.html" class="nav-link">项目</a>
+                <button id="resumeBtn" class="nav-link">简历</button>
+                <button id="contactBtn" class="nav-link">联系</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- banner区域 -->
+    <section class="hero bg-gradient">
+        <div class="hero-container">
+            <div class="hero-content animate-fade-in-up">
+                <h1>你好，我是 Zakki</h1>
+                <p class="subtitle">人工智能 | 数据分析 | 用户体验 | 产品设计</p>
+                
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        查看项目
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        联系我
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" title="微信">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="profile-card animate-fade-in-up">
+                <div class="profile-avatar">Z</div>
+                <h2 class="profile-name">Zakki</h2>
+                <p class="profile-title">中国传媒大学<br>广告学（计算广告双学士学位复合型人才培养项目）</p>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">3.73/4</span>
+                        <span class="stat-label">GPA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">CET6 582</span>
+                        <span class="stat-label">英语</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">B.A. | B.E.</span>
+                        <span class="stat-label">在读</span>
+                    </div>
+                </div>
+                
+                <div class="skills-container">
+                    <span class="skill-tag">AI</span>
+                    <span class="skill-tag">数据分析</span>
+                    <span class="skill-tag">用户研究</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">R</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">关于我</h2>
+                <p class="section-subtitle">了解我的背景、经历和专业技能</p>
+            </div>
+            
+            <div class="card">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                            我是一名来自中国传媒大学的广告学（计算广告双学士学位复合型人才培养项目）学生，对数据分析与用户体验有着浓厚兴趣。
+                        </p>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                            在校期间，我积极参与各类实践项目，曾在北京地下铁道通成广告股份有限公司实习，负责地铁广告数据分析和proDOOH数字户外广告系统建设。
+                        </p>
+                        <p style="line-height: 1.8;">
+                            我喜欢将数据分析应用到实际场景中，曾获得"正大杯"全国大学生市场调查与分析大赛国家二等奖以及阿里瓴羊-中国传媒大学合作项目数据分析专家奖。
+                        </p>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022-2026</div>
+                            <div class="timeline-title">中国传媒大学</div>
+                            <div class="timeline-subtitle">广告学（计算广告双学士学位复合型人才培养项目）</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024.12-2025.3</div>
+                            <div class="timeline-title">北京地下铁道通成广告股份有限公司</div>
+                            <div class="timeline-subtitle">实习</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025.5-至今</div>
+                            <div class="timeline-title">个人知识库管理与问答系统项目</div>
+                            <div class="timeline-subtitle">项目负责人</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选项目 -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">精选项目</h2>
+                <p class="section-subtitle">展示我的技术开发、数据分析和调研策划项目</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">个人知识库管理与问答系统</h3>
+                        <p class="project-description">基于GraphRAG和QLoRA的个人知识库管理与问答系统，实现智能问答和知识检索功能。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GraphRAG</span>
+                            <span class="tech-tag">QLoRA</span>
+                        </div>
+                        <a href="project-detail.html?id=1" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">三元内容生成</h3>
+                        <p class="project-description">基于三元优化的内容智能生成平台，提供高质量的内容创作解决方案。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">内容生成</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">优化算法</span>
+                        </div>
+                        <a href="project-detail.html?id=2" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">正大杯市场调查与分析大赛</h3>
+                        <p class="project-description">全国大学生市场调查与分析大赛国家二等奖获奖项目，深度市场分析与策略制定。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">市场调研</span>
+                            <span class="tech-tag">数据分析</span>
+                            <span class="tech-tag">战略规划</span>
+                        </div>
+                        <a href="project-detail.html?id=3" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="projects.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    查看所有项目
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实习经历 -->
+    <section class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">实习经历</h2>
+                <p class="section-subtitle">我的专业实习和工作经验</p>
+            </div>
+            
+            <div class="card">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024.12 - 2025.3</div>
+                        <div class="timeline-title">北京地下铁道通成广告股份有限公司</div>
+                        <div class="timeline-subtitle">市场部 数据分析</div>
+                        <div class="timeline-description">
+                            <ul style="list-style: disc; margin-left: 1.5rem; line-height: 1.8;">
+                                <li>负责地铁广告数据分析，构建用户画像和流量转化模型</li>
+                                <li>参与proDOOH数字户外广告系统建设，提升广告投放效率</li>
+                                <li>协助部门领导完成各项数据报表和分析工作</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校园经历 -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">校园经历</h2>
+                <p class="section-subtitle">我的校园活动和获奖经历</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">第十五届"正大杯"全国大学生市场调查与分析大赛</h3>
+                        <p class="card-description">国家二等奖（企业赛道）| 2024.11 - 2025.6</p>
+                    </div>
+                    <p>针对正大集团的市场策略进行深入调研与分析，提出有效的市场拓展建议，获得评委高度认可。</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">阿里瓴羊-中国传媒大学夏季合作项目</h3>
+                        <p class="card-description">数据分析专家奖 | 2024.7</p>
+                    </div>
+                    <p>针对全国范围内的图书馆类POI进行标签体系设计；爬取图书馆评论数据，利用Coze设计工作流进行POI批处理与自动打标。</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">北京文化艺术基金传播交流推广资助项目</h3>
+                        <p class="card-description">策展组 | 2024.3 - 2024.9</p>
+                    </div>
+                    <p>参与《北京老字号商印与百年社会生活图景》全媒体文创巡展项目，负责展览资料收集、内容搭建和策划。</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">中国传媒大学国际交流与合作处</h3>
+                        <p class="card-description">宣传组干事 | 2023.9 - 2024.8</p>
+                    </div>
+                    <p>追踪校国际处新闻动态，使用秀米进行公众号推送的制作；参与活动执行，对现场进行影像和文字记录。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">联系我</h2>
+                <p class="section-subtitle">欢迎与我交流合作机会</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">联系方式</h3>
+                    </div>
+                    
+                    <div style="space-y: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 3rem; height: 3rem; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; margin-bottom: 0.25rem;">邮箱</p>
+                                <a href="mailto:zhaoqi_zakki@outlook.com" style="color: var(--primary); text-decoration: none;">zhaoqi_zakki@outlook.com</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="width: 3rem; height: 3rem; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; margin-bottom: 0.25rem;">位置</p>
+                                <p style="color: var(--text-secondary);">北京市朝阳区</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 3rem; height: 3rem; background-color: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; margin-bottom: 0.25rem;">学校</p>
+                                <p style="color: var(--text-secondary);">中国传媒大学</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <div class="social-links" style="justify-content: flex-start;">
+                            <a href="#" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" title="微信">
+                                <i class="fab fa-weixin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">发送消息</h3>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">姓名</label>
+                            <input type="text" id="name" class="form-input" placeholder="请输入您的姓名" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">邮箱</label>
+                            <input type="email" id="email" class="form-input" placeholder="请输入您的邮箱" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">留言</label>
+                            <textarea id="message" class="form-textarea" placeholder="请输入您的留言" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            发送信息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Zakki
+                </div>
+                
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="projects.html" class="footer-link">项目</a></li>
+                    <li><a href="#contact" class="footer-link">联系我</a></li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" title="微信">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zakki 个人网站. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 深色模式切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" title="切换深色模式">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

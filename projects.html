@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakki - 项目集</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="projects-page">
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code"></i>
+                Zakki
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="projects.html" class="nav-link active">项目</a>
+                <button id="resumeBtn" class="nav-link">简历</button>
+                <a href="index.html#contact" class="nav-link">联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 项目页面英雄区域 -->
+    <section class="projects-hero">
+        <div class="projects-hero-content">
+            <h1>我的项目</h1>
+            <p>探索我的技术开发、数据分析和调研策划项目</p>
+        </div>
+    </section>
+
+    <!-- 项目内容 -->
+    <section class="section">
+        <div class="section-container">
+            <!-- 项目过滤器 -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="tech">技术开发</button>
+                <button class="filter-btn" data-filter="data">数据分析</button>
+                <button class="filter-btn" data-filter="research">调研策划</button>
+            </div>
+            
+            <!-- 项目网格 -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- 项目1: 个人知识库管理与问答系统 -->
+                <div class="project-card" data-category="tech">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">个人知识库管理与问答系统</h3>
+                        <p class="project-description">基于GraphRAG和DoRA的个人知识库管理与问答系统，实现智能问答和知识检索功能。该系统能够处理大量文档，构建知识图谱，并提供准确的问答服务。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">GraphRAG</span>
+                            <span class="tech-tag">DoRA</span>
+                        </div>
+                        <a href="project-detail.html?id=1" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目2: 三元内容生成 -->
+                <div class="project-card" data-category="tech">
+                    <div class="project-image">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">三元协同的智能内容生成系统</h3>
+                        <p class="project-description">基于三元优化的内容智能生成平台，提供高质量的内容创作解决方案。通过先进的AI算法，实现多样化内容的自动生成和优化。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">AIGC</span>
+                            <span class="tech-tag">prompt</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <a href="project-detail.html?id=2" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目3: 正大杯市场调查与分析大赛 -->
+                <div class="project-card" data-category="data research">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">正大杯市场调查与分析大赛</h3>
+                        <p class="project-description">全国大学生市场调查与分析大赛国家二等奖获奖项目。针对正大集团的市场策略进行深入调研与分析，提出有效的市场拓展建议。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">市场调研</span>
+                            <span class="tech-tag">数据分析</span>
+                            <span class="tech-tag">战略规划</span>
+                        </div>
+                        <a href="project-detail.html?id=3" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目4: 农村老年居民互联网使用与幸福感研究 -->
+                <div class="project-card" data-category="data research">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">农村老年居民互联网使用与幸福感研究</h3>
+                        <p class="project-description">高级统计方法优秀结课论文，1.7k+阅读量。深入研究农村老年人群体的互联网使用行为与幸福感之间的关系，提供有价值的社会学洞察。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">统计分析</span>
+                            <span class="tech-tag">学术研究</span>
+                            <span class="tech-tag">社会调查</span>
+                            <span class="tech-tag">数据挖掘</span>
+                        </div>
+                        <a href="project-detail.html?id=4" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目5: 图书馆POI自动打标系统 -->
+                <div class="project-card" data-category="tech data">
+                    <div class="project-image">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">图书馆POI自动打标系统</h3>
+                        <p class="project-description">阿里瓴羊合作项目，获数据分析专家奖。针对全国范围内的图书馆类POI进行标签体系设计，利用Coze设计工作流进行POI批处理与自动打标。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">数据爬取</span>
+                            <span class="tech-tag">Coze</span>
+                            <span class="tech-tag">自动化</span>
+                            <span class="tech-tag">POI分析</span>
+                        </div>
+                        <a href="project-detail.html?id=5" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目6: 北京老字号商印文创巡展 -->
+                <div class="project-card" data-category="research">
+                    <div class="project-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">北京老字号商印文创巡展</h3>
+                        <p class="project-description">北京文化艺术基金传播交流推广资助项目。参与《北京老字号商印与百年社会生活图景》全媒体文创巡展项目，负责展览资料收集、内容搭建和策划。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">策展</span>
+                            <span class="tech-tag">文化传播</span>
+                            <span class="tech-tag">项目管理</span>
+                            <span class="tech-tag">内容策划</span>
+                        </div>
+                        <a href="project-detail.html?id=6" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目7: 仿真推荐系统 -->
+                <div class="project-card" data-category="tech">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">仿真推荐系统</h3>
+                        <p class="project-description">基于行为数据的内容智能推荐引擎。通过机器学习算法分析用户行为模式，提供个性化的内容推荐服务，提升用户体验和参与度。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">算法</span>
+                            <span class="tech-tag">推荐系统</span>
+                            <span class="tech-tag">行为分析</span>
+                            <span class="tech-tag">机器学习</span>
+                        </div>
+                        <a href="project-detail.html?id=7" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+                
+                <!-- 项目8: 星宝互动平台 -->
+                <div class="project-card" data-category="tech research">
+                    <div class="project-image">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">星宝互动平台</h3>
+                        <p class="project-description">创新互动体验设计与用户研究项目。专注于提升用户互动体验，通过深入的用户研究和创新的交互设计，打造引人入胜的数字化平台。</p>
+                        <div class="project-tags">
+                            <span class="tech-tag">互动设计</span>
+                            <span class="tech-tag">用户研究</span>
+                            <span class="tech-tag">体验优化</span>
+                            <span class="tech-tag">界面设计</span>
+                        </div>
+                        <a href="project-detail.html?id=8" class="btn btn-ghost project-link">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 加载更多按钮 -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-secondary" id="loadMoreBtn" style="display: none;">
+                    <i class="fas fa-plus"></i>
+                    加载更多项目
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目统计 -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">项目统计</h2>
+                <p class="section-subtitle">我的项目成果和技能分布</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">8+</h3>
+                    <p style="color: var(--text-secondary);">完成项目</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">3+</h3>
+                    <p style="color: var(--text-secondary);">获奖项目</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">5+</h3>
+                    <p style="color: var(--text-secondary);">技术项目</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--error); margin-bottom: 1rem;">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">4+</h3>
+                    <p style="color: var(--text-secondary);">数据分析项目</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能云 -->
+    <section class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">技能分布</h2>
+                <p class="section-subtitle">我在各个项目中使用的技术和工具</p>
+            </div>
+            
+            <div class="card">
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+                    <span class="skill-tag" style="font-size: 1.2rem; padding: 0.75rem 1.5rem;">Python</span>
+                    <span class="skill-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">数据分析</span>
+                    <span class="skill-tag" style="font-size: 1.1rem; padding: 0.6rem 1.2rem;">机器学习</span>
+                    <span class="skill-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">SPSS</span>
+                    <span class="skill-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">用户研究</span>
+                    <span class="skill-tag" style="font-size: 1.3rem; padding: 0.8rem 1.6rem;">项目管理</span>
+                    <span class="skill-tag" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">GraphRAG</span>
+                    <span class="skill-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">内容策划</span>
+                    <span class="skill-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">QLoRA</span>
+                    <span class="skill-tag" style="font-size: 1.1rem; padding: 0.6rem 1.2rem;">市场调研</span>
+                    <span class="skill-tag" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">Coze</span>
+                    <span class="skill-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">数据挖掘</span>
+                    <span class="skill-tag" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">PowerBI</span>
+                    <span class="skill-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">统计分析</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Zakki
+                </div>
+                
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="projects.html" class="footer-link">项目</a></li>
+                    <li><a href="index.html#contact" class="footer-link">联系我</a></li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" title="微信">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zakki 个人网站. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 深色模式切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" title="切换深色模式">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
