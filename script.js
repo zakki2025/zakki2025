@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (isDownload) {
                 // 用户点击“是”，执行下载（这里填写你的下载逻辑）
-                // 例如：window.location.href = 'your-resume.pdf';
+                window.location.href = 'assets/resume.pdf';
                 showNotification('正在下载简历...', 'info');
 
                 // 示例下载操作，替换为实际的PDF路径即可
