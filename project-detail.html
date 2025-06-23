@@ -201,8 +201,8 @@
                     tags: ["Flutter", "GraphRAG", "DoRA", "NLP"],
                     
                     details: {
-                        background: "随着信息时代的到来，个人学习和工作中积累的文档资料越来越多，如何高效地管理和检索这些知识成为了一个重要问题。传统的文件管理方式往往无法满足快速准确检索的需求，因此开发一个智能的知识库管理系统变得尤为重要。",
-                        implementation: "系统采用最新的GraphRAG（图检索增强生成）技术，将文档内容转换为知识图谱，通过图结构来表示实体之间的关系。同时结合DoRA技术，在保持模型性能的同时大幅降低了计算资源需求。",
+                        background: "公共艺术设计领域知识复杂且分散，传统问答系统难以精准处理垂类知识及复杂关系查询。项目旨在开发一款专注于公共艺术设计领域的学习助手，通过大模型微调与检索增强技术，实现端到端的智能问答、知识关系可视化及问答记录管理，解决公共艺术领域知识查询效率低、逻辑展示不直观的问题，满足用户对精准、可解释性问答的需求。",
+                        implementation: "系统采用最新的GraphRAG（图检索增强生成）技术，将文档内容转换为知识图谱，通过图结构来表示实体之间的关系。同时结合DoRA技术，在保持模型性能的同时大幅降低了计算资源需求。通过Flutter搭建应用。",
                         features: [
                             "自动提取文档中的实体和关系，构建知识图谱",
                             "基于知识图谱的问答系统，提供准确的答案和相关上下文",
@@ -236,7 +236,7 @@
                     
                     details: {
                         background: "AI驱动广告变革：创意、制作到分发的重塑。<br>传统的制作展示流程繁琐低效；户外广告时效性与个性化需求升级",
-                        implementation: "整合Coze、ComfyUI等AI工具构建工作流，实现“图像分析-创意生成-效果优化”的应用闭环。通过多模型协同，高效联动不同效能的AI产品，实践广告生产从“人工主导”向“AI协同”的转型。",
+                        implementation: "1. 物料生成技术：<br>文生图：基于用户输入的产品名称、描述、尺寸及展示图，通过Coze工作流优化Prompt（提示词），结合大模型生成符合需求的海报物料（如突出产品主体、指定主色调与场景）。<br>图生图：针对产品图不一致问题，利用FLUX-Kontext模型（强上下文理解能力）和豆包视觉理解模型，识别图像特征并生成替换提示词；通过ComfyUI工作流实现多图参考（保持背景与文字不变），智能替换产品图，解决传统图生图中文字混乱、多图参考难的问题。<br>2.效果图生成技术：<br>坐标检测与透视合成：通过坐标检测获取广告位坐标，结合边缘检测、深度图及透视矩阵计算，实现物料与实景图的精准融合。<br>光影渲染：优化图像融合后的光影效果，模拟广告在实际户外场景（如公交站牌、地铁灯箱）中的真实展示效果。<br>3.系统整合与部署：<br>利用liblib插件实现ComfyUI工作流的云端调用与异步执行，通过ngrok内网穿透技术解决本地节点的外网访问问题；<br>开发前端交互界面，绑定工作流API，支持用户自定义参数（如比例、场景），完成全流程测试。",
                         features: [
                             "通过AI技术实现广告物料与效果图的快速生成",
                             "提升设计效率并降低企业的宣传成本",
@@ -252,7 +252,7 @@
                         },
                         {
                             src: "assets/2-2.png",
-                            caption: "效果图"
+                            caption: "ComfyUI"
                         }
                     ],
 
@@ -269,13 +269,14 @@
                     tags: ["prompt优化", "AIGC", "coze", "NLP"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "内容端：品牌产品内容与消费者未匹配，无法个性化沟通；社媒种草未发挥KOL潜力，缺少活人感。投放端：圈选人群千篇一律，没有增量解法；种草内容数据显著差于日常内容。该系统将品牌×KOL×消费者三者有机结合，生成更个性化、更真实、更受消费者喜欢的内容，从而达到提升⼴告CTR、CVR的效果。通过语料基建拆解品牌产品、消费者与KOL对内容创作的影响和三者如何在内容创作中协同作用，生成投放级的笔记参考。",
+                        implementation: "1. 对品牌产品、消费者、KOL三个要素分别进行语料获取、标签体系设计、打标签与模拟数据生成。<br>2. 基于大模型完成品牌产品x消费者xKOL的融合机制，并以此为原则生成以实际种草内容为标准的笔记内容参考。<br>3. 设计并搭建可直接使用的产品前端页面，并通过自然语言处理与问卷调研的方法完成内容效果对比测试。",
                         features: [
-                            "",
-                            ""
+                            "影响特征标签化",
+                            "三元动态匹配机制",
+                            "内容生成方案设计"
                         ],
-                        outcomes: "。"
+                        outcomes: "人物类实体丰富度、多样性显著增加。在问卷测试人群中，生成内容得分显著高于已有投放内容。"
                     },
 
                     gallery: [
@@ -302,62 +303,61 @@
                     tags: ["市场调研", "数据分析", "战略规划"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "系统性分析鸡肉调理品行业现状与竞争格局，探究北京市宝妈的人群特征和消费需求，结合正大品牌的优劣势，基于4P理论框架提出针对性的市场策略建议。。",
+                        implementation: "采用文献调查法、逻辑推理、PEST分析、网络爬虫、文本挖掘、层次聚类、结构方程模型、问卷调查法、半结构化访谈。<br>我的分工：<br>① 测算鸡肉调理品行业市场容量，分析该行业的渠道结构和区域市场份额；<br>② 爬取电商平台商品评论，进行情感分析和语义网络分析，为消费者调查提供支持；<br>③ 收集问卷并对描述性统计结果进行数据可视化；<br>④ 分析人群特征、购买因素和市场情况，总结归纳调研结论，给出针对正大的市场拓展建议。",
                         features: [
-                            "",
-                            ""
+                            "行业市场整体评估",
+                            "细分人群市场拓展"
                         ],
-                        outcomes: "。"
+                        outcomes: "全国大学生市场调查与分析大赛国家二等奖。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/4-1.png",
+                            caption: "研究背景图"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/4-2.png",
+                            caption: "获奖公示"
                         }
                     ],
 
                     links: {
                         github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        document: "https://zakki2025.github.io/zakki2025/assets/4.pdf"
                     }
                 },
                 5: {
                     title: "农村老年居民互联网使用与幸福感研究",
                     category: "数据分析 调研策划",
                     date: "2025.3",
-                    description: "高级统计方法优秀结课论文，1.7k+阅读量。深入研究农村老年人群体的互联网使用行为与幸福感之间的关系，提供有价值的社会学洞察。",
+                    description: "高级统计方法优秀结课论文，在公众号有1.7k+阅读量。深入研究农村老年人群体的互联网使用行为与幸福感之间的关系，提供有价值的社会学洞察。",
                     tags: ["统计分析", "因果推断", "数据挖掘"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "通过CGSS2021数据的实证分析，探讨互联网使用对农村老年居民主观幸福感的影响，采用工具变量方法，解决内生性问题。",
+                        implementation: "因果推断 工具变量 R",
                         features: [
-                            "",
-                            ""
+                            "采用工具变量方法"
                         ],
-                        outcomes: "。"
+                        outcomes: "研究发现，互联网使用与农村老年居民的幸福感之间存在复杂的关系，个人经济地位对幸福感的影响始终显著，年龄变量的显著变化则去神秘化了年龄效应。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/5-1.png",
+                            caption: "报告介绍"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/5-2.png",
+                            caption: "研究方法"
                         }
                     ],
 
                     links: {
                         github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        document: "https://mp.weixin.qq.com/s/s5h9oiZ8fSlaqutM6aWjnw"
                     }
                 },
                 6: {
@@ -368,29 +368,29 @@
                     tags: ["Coze", "数据分析", "POI分析", "体系设计"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "项目聚焦图书馆类POI的标签体系设计与洞察分析，旨在通过构建标准化的标签体系，挖掘图书馆的多维度特征（如目标人群、设施、特色等），并结合客流数据分析其属性分布与关联，为图书馆的商业价值评估、用户需求匹配及运营优化提供数据支持。项目数据覆盖全国22个省、5个自治区、4个直辖市、361个地级市，共14218条图书馆POI数据。",
+                        implementation: "通过分层抽样与手动取样结合，解决了数据量大、冗余问题，筛选出4个典型城市的793条样本，提升分析效率。结合其他平台爬取信息进行数据挖掘，抽取POI特征，通过大模型协同人工设计标签体系。设计工作流，实现批处理和自动打标。",
                         features: [
-                            "",
-                            ""
+                            "POI价值洞察",
+                            "标签化协同运营"
                         ],
-                        outcomes: "。"
+                        outcomes: "建立了四维度标准化标签体系，覆盖图书馆核心特征，为后续数据挖掘和应用提供基础。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/6.jpg",
+                            caption: "奖项"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/6-1.png",
+                            caption: "项目流程图"
                         }
                     ],
 
                     links: {
                         github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        document: "https://zakki2025.github.io/zakki2025/assets/6.pdf"
                     }
                 },
                 7: {
@@ -401,29 +401,29 @@
                     tags: ["策展", "文化传播", "项目管理", "内容策划"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "项目以“百年商印与社会生活变迁”为主题，聚焦北京老字号商印（商业用途印章）的历史与文化价值，通过展览形式展现商印作为商业标识的演变轨迹，以及其背后折射的北京社会生活、文化变迁与时代精神。项目旨在通过商印这一微观视角，串联古都文化、京味文化、红色文化、国际大都市文化四大北京文化特征，唤起公众对传统商业文化的记忆，推动文化传承与创新。",
+                        implementation: "天光展厅：以商印窗花镂空悬挂形成光影效果，墙面通过立体木块拼贴北京不同文化代表建筑（如故宫、前门大街），结合商印LOGO树的光影装置，营造历史与现代交融的氛围。",
                         features: [
-                            "",
-                            ""
+                            "以“古都风华”“京韵印迹”“丹心岁月”“都市脉动”四大主题，对应北京四大文化特征（古都文化、京味文化、红色文化、国际大都市文化），通过荣宝斋、东来顺、信远斋、同仁堂等20余家老字号商印及历史展品，系统呈现北京百年商业变迁与社会生活的关联。",
+                            "环廊展厅通过街道布景（如琉璃厂文化街、大栅栏）还原老北京商业氛围，结合古风桌椅、牌匾、幌子等实体元素，复刻历史场景。"
                         ],
-                        outcomes: "。"
+                        outcomes: "融合实体布景、多媒体技术（投影、触控）、物理互动（盖章、临摹）等多元形式，打破传统展览的单向传播模式，提升观众参与感与记忆点，尤其吸引年轻群体关注传统文化。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/7-1.png",
+                            caption: "受众分析"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/7-2.png",
+                            caption: "天光展厅"
                         }
                     ],
 
                     links: {
                         github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        document: "https://zakki2025.github.io/zakki2025/assets/7.pdf"
                     }
                 },
                 8: {
@@ -431,32 +431,32 @@
                     category: "技术开发",
                     date: "2024.11 - 2024.12",
                     description: "用协同过滤和内容推荐算法实现精准推荐，提供个性化的内容推荐服务，提升用户体验和参与度。",
-                    tags: ["可视化", "推荐算法", "行为分析"],
+                    tags: ["可视化", "推荐算法", "VUE.JS", "python", "flask"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "项目聚焦“定福庄周边美食推荐系统与可视化”，旨在通过数据挖掘和推荐算法，为用户提供个性化的周边美食推荐，并通过可视化工具直观展示区域内的餐饮数据（如热门店铺、菜品分布、评分情况等）。项目数据来源包括大众点评爬取的750条店铺数据、67000+条用户评论，以及阿里云MealRating数据集的38000+条菜品评分数据。",
+                        implementation: "1. 数据获取：使用Python的requests库和正则表达式爬取大众点评的店铺信息（标签、位置、评分、人均消费等）及用户评论（内容、时间），通过SQLite数据库存储数据。补充阿里云MealRating数据集，整合用户-菜品评分数据。<br>2. 算法设计：基于Surprise库实现KNNBasic、SVD、SVD++等算法，在用户-菜品评分稀疏度99.56%的场景下，SVD++表现最佳（RMSE 0.9699），用于推荐用户可能感兴趣的菜品。调用智谱清言大模型生成菜品和店铺描述（包含原料、做法、口感等信息），结合Sentence-BERT计算菜品与店铺的相似度；综合场景标签匹配度（如“家庭聚餐”）、用户关注点（口味/环境/服务评分>4）、店铺总体评分（>4.5加1分）等维度加权计算最终推荐分，筛选高匹配度店铺。<br>3. 前后端搭建：后端采用Flask框架，通过路由机制处理前端请求（如获取热门店铺、菜品分布数据），并封装推荐函数get_final_recommendations，接收用户ID、场景标签、关注点参数，返回个性化推荐列表。前端使用Vue.js和Element UI构建界面，包含数据可视化（ECharts实现柱状图、饼图、雷达图、树状图）、推荐系统输入（用户ID、场景、关注点选择）及周边商家管理（店铺信息展示、搜索、编辑、删除）模块；通过Axios实现前后端跨域数据传输。",
                         features: [
-                            "",
-                            ""
+                            "1. 个性化美食推荐：根据用户ID、用餐场景（如“情侣约会”“公司团建”）和关注点（口味/环境/服务），结合协同过滤（推荐菜品）和内容推荐（匹配店铺），输出5家高匹配度店铺及各项得分（菜品相似度、场景匹配度、关注点匹配度、总体评分）。",
+                            "2. 数据可视化：通过柱状图对比评论量前十的店铺评分；饼图展示不同菜品类型占比；雷达图呈现店铺总评分、口味、环境、服务的最大值、最小值和平均值；树状图展示不同商圈的菜品类型分布。"
                         ],
-                        outcomes: "。"
+                        outcomes: "实现了前后端联动的推荐系统与可视化平台，支持用户输入场景和关注点获取个性化推荐，同时通过多维度图表直观展示区域餐饮数据，为用户决策和商家分析提供支持。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/8-1.png",
+                            caption: "架构图"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/8-2.png",
+                            caption: "推荐算法"
                         }
                     ],
 
                     links: {
                         github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        document: "https://zakki2025.github.io/zakki2025/assets/8.pdf"
                     }
                 },
                 9: {
@@ -467,29 +467,29 @@
                     tags: ["互动设计", "用户研究", "前端工程"],
                     
                     details: {
-                        background: "。",
-                        implementation: "。",
+                        background: "星宝 Starbabe 网站专为孤独症群体设计，集合知识星球、论坛家园、游戏测试、艺术天地等多项功能板块，旨在为孤独症群体打造可信赖的网络天地，为孤独症儿童及其家庭提供一个全面的、个性化的支持平台， 帮助他们更好地适应社交环境，提高生活质量，促进全面发展。",
+                        implementation: "基于对用户需求的洞察，我们以“让每一颗星星得到关爱”为品牌和网站的目标。在网站设计上，打造一款易用、关怀的网站为突破点，通过轻松、明确的布局排版和直观的功能入口来辅助用户适用，展现对用户的关怀与帮助；在视觉风格设计上，将黄色、橙色等温暖的颜色作为网站的主要色彩部分，少量冷色作为点缀，传达关怀、温暖的品牌理念。",
                         features: [
-                            "",
-                            ""
+                            "UI设计",
+                            "交互设计"
                         ],
-                        outcomes: "。"
+                        outcomes: "在github上发布网站。"
                     },
 
                     gallery: [
                         {
-                            src: "assets/qa_system.png",
-                            caption: "系统架构图"
+                            src: "assets/9-1.png",
+                            caption: "页面图"
                         },
                         {
-                            src: "assets/qa_system.png",
-                            caption: ""
+                            src: "assets/9-2.png",
+                            caption: "架构图"
                         }
                     ],
 
                     links: {
-                        github: "https://github.com/zakki2025/zakki2025/tree/main",
-                        document: "#"
+                        github: "https://damara926232.github.io/StarBabe/",
+                        document: "https://zakki2025.github.io/zakki2025/assets/9.pdf"
                     }
                 },
             };
@@ -516,10 +516,13 @@
                 document.getElementById('projectDetails').innerHTML = `
                     <h3>项目背景</h3>
                     <p>${project.details.background}</p>
+                    <br>
                     <h3>技术实现</h3>
                     <p>${project.details.implementation}</p>
+                    <br>
                     <h3>核心功能</h3>
                     <ul>${project.details.features.map(feature => `<li><strong>要点：</strong>${feature}</li>`).join('')}</ul>
+                    <br>
                     <h3>项目成果</h3>
                     <p>${project.details.outcomes}</p>`;
                 document.getElementById('githubLink').href = project.links.github;
