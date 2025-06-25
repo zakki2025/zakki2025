@@ -1,5 +1,5 @@
 # 个人作品集网站
-<br>https://zakki2025.github.io/zakki2025/
+https://zakki2025.github.io/zakki2025/
 # 作品链接直达
 ## project 1 [户外广告生成与效果图展示] in coze
 <br>https://www.coze.cn/store/project/7519449034923409434?entity_id=1&bid=6gmlkh91s1g18
