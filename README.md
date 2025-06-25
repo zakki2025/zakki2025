@@ -1,5 +1,3 @@
-# 个人作品集网站
-https://zakki2025.github.io/zakki2025/
 # 作品链接直达
 ## project 1 [户外广告生成与效果图展示] in coze
 https://www.coze.cn/store/project/7519449034923409434?entity_id=1&bid=6gmlkh91s1g18
@@ -9,5 +7,4 @@ https://www.coze.cn/store/project/7504641960523841586?bid=6gb26gr8g3014
 https://github.com/zakki2025/zakki2025/tree/qa_system
 ## project 4 [定福庄周边美食混合推荐仿真系统] in github
 https://github.com/zakki2025/zakki2025/tree/Recommender-System
-## 其他
-https://zakki2025.github.io/zakki2025/projects.html
+
