@@ -1,0 +1,261 @@
+{
+  "2": {
+    "inputs": {
+      "low_threshold": 100,
+      "high_threshold": 200,
+      "resolution": 512,
+      "image": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CannyEdgePreprocessor",
+    "_meta": {
+      "title": "Canny Edge"
+    }
+  },
+  "4": {
+    "inputs": {
+      "a": 6.280000000000001,
+      "bg_threshold": 0.10000000000000002,
+      "resolution": 512,
+      "image": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "MiDaS-DepthMapPreprocessor",
+    "_meta": {
+      "title": "MiDaS Depth Map"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "auto_detect": false,
+      "points_str": "395,359,1045,224,1091,1386,411,1310",
+      "image": [
+        "39",
+        0
+      ],
+      "canny_image": [
+        "2",
+        0
+      ],
+      "depth_image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "CustomNode_FourPointPerspectiveTransform",
+    "_meta": {
+      "title": "四点透视变换与比例提取"
+    }
+  },
+  "14": {
+    "inputs": {
+      "flattened_width": [
+        "13",
+        4
+      ],
+      "flattened_height": [
+        "13",
+        5
+      ],
+      "image_to_transform": [
+        "40",
+        0
+      ],
+      "perspective_matrix": [
+        "13",
+        2
+      ],
+      "original_image_size_ref": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "CustomNode_ApplyPerspectiveTransform",
+    "_meta": {
+      "title": "应用透视变换"
+    }
+  },
+  "17": {
+    "inputs": {
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "18": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "14",
+        0
+      ],
+      "source": [
+        "14",
+        0
+      ],
+      "mask": [
+        "13",
+        3
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "合成图像（遮罩）"
+    }
+  },
+  "19": {
+    "inputs": {
+      "brightness_factor": 0.8800000000000001,
+      "contrast_factor": 1.12,
+      "saturation_factor": 1.0700000000000003,
+      "blended_image": [
+        "18",
+        0
+      ],
+      "original_image": [
+        "39",
+        0
+      ],
+      "mask": [
+        "13",
+        3
+      ]
+    },
+    "class_type": "CustomNode_LightingAndColorAdjust",
+    "_meta": {
+      "title": "光影与色彩调整"
+    }
+  },
+  "20": {
+    "inputs": {
+      "images": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "22": {
+    "inputs": {
+      "filename_prefix": "OOH_Preview",
+      "images": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "saveimage"
+    }
+  },
+  "25": {
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "36": {
+    "inputs": {
+      "mask": [
+        "13",
+        3
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "遮罩转换为图像"
+    }
+  },
+  "37": {
+    "inputs": {
+      "images": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "38": {
+    "inputs": {
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "39": {
+    "inputs": {
+      "keep_alpha_channel": false,
+      "output_mode": false,
+      "image": "2).jpg"
+    },
+    "class_type": "LoadImageFromUrl",
+    "_meta": {
+      "title": "upload"
+    }
+  },
+  "40": {
+    "inputs": {
+      "keep_alpha_channel": false,
+      "output_mode": false,
+      "image": "ad1.jpg"
+    },
+    "class_type": "LoadImageFromUrl",
+    "_meta": {
+      "title": "load_poster"
+    }
+  },
+  "42": {
+    "inputs": {
+      "key": "https://catbox.moe/user/api.php",
+      "host": "catbox",
+      "image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ImageUploader",
+    "_meta": {
+      "title": "Image Uploader"
+    }
+  }
+}
