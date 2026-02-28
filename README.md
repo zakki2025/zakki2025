@@ -1,10 +1,31 @@
-# 作品链接直达
-## project 1 [户外广告生成与效果图展示] in coze
-https://www.coze.cn/store/project/7519449034923409434?entity_id=1&bid=6gmlkh91s1g18
-## project 2 [「品牌×KOL×消费者」协同的智能内容生成系统] in coze
-https://www.coze.cn/store/project/7504641960523841586?bid=6gb26gr8g3014
-## project 3 [个人知识库管理与问答系统] in github
-https://github.com/zakki2025/zakki2025/tree/qa_system
-## project 4 [定福庄周边美食混合推荐仿真系统] in github
-https://github.com/zakki2025/zakki2025/tree/Recommender-System
+# Dingfuzhuang Surrounding Cuisine Hybrid Recommendation System
+See code in vue_project file. And there is also an intro below.
+<img width="1268" height="615" alt="image" src="https://github.com/user-attachments/assets/294e85f9-e7eb-4680-8a64-a2e3aafcef8c" />
+## Data Engineering
+Engineered an ETL pipeline to scrape and clean 100,000+ data points from Dianping and Alibaba Cloud; performed feature engineering on user preferences, restaurant attributes, and contextual factors (location, price range) to construct a high-dimensional sparse matrix.
+<img width="1818" height="786" alt="image" src="https://github.com/user-attachments/assets/8c5f0add-c850-463a-90af-dd5414f956ca" />
+<img width="1983" height="1023" alt="image" src="https://github.com/user-attachments/assets/c4a1f8db-f820-4709-96d5-c81f9e745b1b" />
+<img width="1976" height="1035" alt="image" src="https://github.com/user-attachments/assets/5dcdd9dd-afbd-4827-b1bc-8f33ab6e79f3" />
 
+## hybrid model Design
+Designed a hybrid model integrating SVD-based Collaborative Filtering for latent factor discovery and BERT-driven Content-Based Filtering for semantic understanding of reviews. Implemented a weighted fusion strategy to effectively address the \textbf{cold-start problem} for new users/items, achieving an RMSE of 0.96 and superior precision in top-N recommendations.
+<img width="1986" height="1038" alt="image" src="https://github.com/user-attachments/assets/a1539c16-8989-469f-86f4-c7d648ca9ed4" />
+<img width="1982" height="1047" alt="image" src="https://github.com/user-attachments/assets/e72ba40a-68b3-48f0-a535-66825e0e3841" />
+<img width="1998" height="1049" alt="image" src="https://github.com/user-attachments/assets/4ec0c81c-b81b-4cbf-a210-c6b37a88c03b" />
+<img width="1971" height="1053" alt="image" src="https://github.com/user-attachments/assets/93afccc7-7695-4885-865d-e1e9f8ae66b3" />
+<img width="1971" height="1044" alt="image" src="https://github.com/user-attachments/assets/505c5f92-73d6-4615-b777-ede7e46f8f9c" />
+<img width="1965" height="1035" alt="image" src="https://github.com/user-attachments/assets/9b0e39e7-1d87-4df5-89c6-d2d3d60b26b9" />
+
+## Developed an interactive dashboard using Vue.js and ECharts to visualise user preference clusters, recommendation diversity, and system performance metrics, enabling intuitive exploration of dining patterns and algorithmic transparency.
+<img width="1974" height="1044" alt="image" src="https://github.com/user-attachments/assets/7763c7b5-a654-4509-a3f3-bf9759296e67" />
+<img width="1989" height="1044" alt="image" src="https://github.com/user-attachments/assets/7097a4e4-f894-4ba3-9088-442d1b362594" />
+<img width="1989" height="1052" alt="image" src="https://github.com/user-attachments/assets/4ede5427-3542-4798-a82a-63b23818733b" />
+<img width="1977" height="1050" alt="image" src="https://github.com/user-attachments/assets/4caae8d5-33e2-403c-ad03-6ff252f2f8c8" />
+<img width="1962" height="1049" alt="image" src="https://github.com/user-attachments/assets/c1021de9-35d4-45e3-87f8-30a5a9c1c8f1" />
+<img width="1971" height="1040" alt="image" src="https://github.com/user-attachments/assets/f177faa0-106e-449c-a00c-ef79866fc726" />
+<img width="1971" height="1044" alt="image" src="https://github.com/user-attachments/assets/34eb1745-bd58-46a6-8e2a-e7aa82922eb7" />
+
+
+
+# 户外广告生成
+See code in project1 file. And there is also an intro below.
