@@ -2,11 +2,15 @@
 
 Try it here in Coze: https://www.coze.cn/store/project/7504641960523841586?bid=6gb26gr8g3014
 
+Read the intro in BKC_intro.pdf
+
+<img width="900" src="https://github.com/user-attachments/assets/90ac3f22-180d-4ff8-8276-2dc5ad37d084" />
+
 
 
 ## Market Insight \& Consumer Behaviour Analysis for CP Group's Poultry Products
 
-See the intro in 妈妈厨房里的"鸡"智革命:正大品牌鸡肉调理类深加工制品市场及消费研究以北京市宝妈为例-PPT.pdf
+Read the intro in 妈妈厨房里的"鸡"智革命:正大品牌鸡肉调理类深加工制品市场及消费研究以北京市宝妈为例-PPT.pdf
 
 • Designed a mixed-method study based on the Theory of Planned Behaviour and 4P Marketing Mix; executed a three-stage stratified sampling across Beijing’s 16 districts; collected and cleaned 718 valid responses, ensuring data representativeness for the ”Mom” demographic with children aged 0–14.
 
