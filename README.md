@@ -55,6 +55,3 @@ Designed a hybrid model integrating SVD-based Collaborative Filtering for latent
   </tr>
 </table>
 
-
-# 户外广告生成
-See code in project1 file. And there is also an intro below.
