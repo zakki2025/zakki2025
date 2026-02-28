@@ -10,8 +10,8 @@ Engineered an ETL pipeline to scrape and clean 100,000+ data points from Dianpin
  <img src="https://github.com/user-attachments/assets/8c5f0add-c850-463a-90af-dd5414f956ca" width="600" />
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/c4a1f8db-f820-4709-96d5-c81f9e745b1b" width="300" /></td>
-    <td><img src="https://github.com/user-attachments/assets/5dcdd9dd-afbd-4827-b1bc-8f33ab6e79f3" width="300" /></td>
+    <td><img src="https://github.com/user-attachments/assets/c4a1f8db-f820-4709-96d5-c81f9e745b1b" width="450" /></td>
+    <td><img src="https://github.com/user-attachments/assets/5dcdd9dd-afbd-4827-b1bc-8f33ab6e79f3" width="450" /></td>
   </tr>
 </table>
 
@@ -39,17 +39,19 @@ Designed a hybrid model integrating SVD-based Collaborative Filtering for latent
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/7763c7b5-a654-4509-a3f3-bf9759296e67" width="450" /></td>
-    <td><img src="https://github.com/user-attachments/assets/7097a4e4-f894-4ba3-9088-442d1b362594" width="450" /></td>
+    <td><img src="https://github.com/user-attachments/assets/7763c7b5-a654-4509-a3f3-bf9759296e67" width="300" /></td>
+    <td><img src="https://github.com/user-attachments/assets/7097a4e4-f894-4ba3-9088-442d1b362594" width="300" /></td>
+   <td><img src="https://github.com/user-attachments/assets/4ede5427-3542-4798-a82a-63b23818733b" width="300" /></td>
   </tr>
+ </table>
+ <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/4ede5427-3542-4798-a82a-63b23818733b" width="450" /></td>
     <td><img src="https://github.com/user-attachments/assets/4caae8d5-33e2-403c-ad03-6ff252f2f8c8" width="450" /></td>
+   <td><img src="https://github.com/user-attachments/assets/c1021de9-35d4-45e3-87f8-30a5a9c1c8f1" width="450" /></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/c1021de9-35d4-45e3-87f8-30a5a9c1c8f1" width="300" /></td>
-    <td><img src="https://github.com/user-attachments/assets/f177faa0-106e-449c-a00c-ef79866fc726" width="300" /></td>
-    <td><img src="https://github.com/user-attachments/assets/34eb1745-bd58-46a6-8e2a-e7aa82922eb7" width="300" /></td>
+    <td><img src="https://github.com/user-attachments/assets/f177faa0-106e-449c-a00c-ef79866fc726" width="450" /></td>
+    <td><img src="https://github.com/user-attachments/assets/34eb1745-bd58-46a6-8e2a-e7aa82922eb7" width="450" /></td>
   </tr>
 </table>
 
