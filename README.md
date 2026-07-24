@@ -1,9 +1,5 @@
-# 作品链接直达
-## project 1 [户外广告生成与效果图展示] in coze
-https://www.coze.cn/store/project/7519449034923409434?entity_id=1&bid=6gmlkh91s1g18
-## project 2 [「品牌×KOL×消费者」协同的智能内容生成系统] in coze
-https://www.coze.cn/store/project/7504641960523841586?bid=6gb26gr8g3014
-## project 3 [个人知识库管理与问答系统] in github
-https://github.com/zakki2025/zakki2025/tree/qa_system
-## project 4 [定福庄周边美食混合推荐仿真系统] in github
-https://github.com/zakki2025/zakki2025/tree/Recommender-System
+Intelligent QA System for Public Art Domain
+
+Processed 300+ domain-specific PDFs using MinerU for layout analysis; designed multistage prompt workflows to synthesise 10,000+ high-quality instruction-following QA pairs, constructing a specialised knowledge base for the public art sector.
+Evaluated RAG, fine-tuning, and Hybrid approaches; implemented a GraphRAG framework integrated with LoRA fine-tuning on Qwen2.5-7B, which enhanced retrieval accuracy by resolving multi-hop reasoning challenges, outperforming baseline models in both automated metrics (BLEU/ROUGE) and human evaluation.
+Developed an end-to-end application using Flutter (Frontend) and Flask (Backend); implemented features including dynamic dialogue configuration, conversation history management (CRUD), and real-time knowledge base updates, ensuring low-latency responses.
